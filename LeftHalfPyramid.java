@@ -1,17 +1,20 @@
 import java.util.Scanner;
-
 public class LeftHalfPyramid {
     public static void main(String[] args) {
         try(Scanner sc=new Scanner(System.in)){
-            System.out.print("Enter the number of Rows:");
+            System.out.print("Enter the number of Rows :");
             int rows=sc.nextInt();
-            for(int i=0;i<rows;i++){
-                for(int j=rows;j>i;j--){
-                    System.out.print((j>i+1)?"* ":"*");
+            for(int i=rows;i>0;i--){
+                for(int j=1;j<i;j++){
+                    System.out.print("  ");
                 }
-                if(i<rows-1){
+                for(int k=0;k<=rows-i;k++){
+                    System.out.print((k<rows-i)?"* ":"*");
+                }
+                if(i>1){
                     System.out.println();
                 }
+                
             }
         }
     }

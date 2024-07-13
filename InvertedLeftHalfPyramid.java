@@ -9,9 +9,12 @@ public class InvertedLeftHalfPyramid {
                     System.out.print("  ");
                 }
                 for(int k=0;k<rows-i;k++){
-                    System.out.print("* ");
+                    System.out.print((k<rows-i-1)?"* ":"*");
                 }
-                System.out.println();
+                if(i<rows-1){
+                    System.out.println();
+                }
+                
             }
         }
     }
